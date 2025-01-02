@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  padding: 150px;
+
+  display: flex;
+  gap: 20px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.textWrapper h2 {
+  width: 133px;
+  font-family: 'Italianno', cursive;
+  font-size: 35px;
+  line-height: 1.25;
+  border-bottom: 1px solid #fcac45;
+}

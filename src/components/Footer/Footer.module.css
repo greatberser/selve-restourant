@@ -1,0 +1,35 @@
+.footer {
+  border-top: 1px solid #fcac45;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 32px 150px 11px;
+  text-align: center;
+}
+
+.footerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 300px;
+  margin-bottom: 56px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.list li:first-child {
+  font-family: 'Italianno', cursive;
+  font-size: 27px;
+  line-height: 1.26;
+}

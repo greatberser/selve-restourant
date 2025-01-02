@@ -1,0 +1,61 @@
+.mealCard {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 22px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.image {
+  width: 538px;
+  height: 274px;
+  object-fit: cover;
+}
+
+.textWrapper {
+  max-width: 540px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.name {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Italianno', cursive;
+  line-height: 1.25;
+  margin-bottom: 28px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .mealCard {
+    flex-direction: column; /* Перемикаємо порядок на стовпчик */
+    text-align: center;
+  }
+
+  .name {
+    order: 1; /* Назва перша */
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .image {
+    order: 2; /* Зображення друге */
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .desc {
+    order: 3; /* Опис третій */
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}

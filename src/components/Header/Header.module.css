@@ -1,0 +1,67 @@
+/* components/Header.module.css */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 25px 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 152px;
+  align-items: center;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navLeft,
+.navRight {
+  display: flex;
+  gap: 152px;
+}
+
+.navCenter {
+  text-align: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #ff9800;
+}
+
+.logo {
+  color: #000;
+  font-family: 'Italianno', cursive;
+  font-size: 40px;
+  font-style: italic;
+  line-height: 1.2;
+  position: relative;
+  border-bottom: 1px solid #ff9800;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
