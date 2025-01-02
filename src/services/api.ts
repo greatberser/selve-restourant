@@ -1,7 +1,13 @@
-// services/api.ts
 import axios from 'axios';
 
-export const fetchMeals = async (count: number = 5) => {
+interface Meal {
+  idMeal: string;
+  strMeal: string;
+  strMealThumb: string;
+  strInstructions: string;
+}
+
+export const fetchMeals = async (count: number = 5): Promise<Meal[]> => {
   try {
     const requests = Array(count)
       .fill(null)
@@ -11,6 +17,12 @@ export const fetchMeals = async (count: number = 5) => {
     const responses = await Promise.all(requests);
     return responses.map((response) => response.data.meals[0]);
   } catch (error) {
-    throw new Error('Failed to fetch meals');
+    if (axios.isAxiosError(error)) {
+      // Виводимо інформацію про помилку axios
+      throw new Error(`Failed to fetch meals: ${error.message}`);
+    } else {
+      // Обробка інших помилок
+      throw new Error('Failed to fetch meals');
+    }
   }
 };
