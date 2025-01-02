@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 import s from './MealCard.module.css';
 
 interface MealCardProps {
@@ -26,7 +26,13 @@ const MealCard: React.FC<MealCardProps> = ({
   return (
     <>
       <div className={`${s.mealCard} ${reverse ? s.reverse : ''}`}>
-        <img src={image} alt={name} className={s.image} />
+        <Image
+          src={image}
+          alt={name}
+          className={s.image}
+          width={538}
+          height={274}
+        />
         <div className={s.textWrapper}>
           <h3 className={s.name}>{name}</h3>
           <p className={s.desc}>{truncateText(desc, 350)}</p>

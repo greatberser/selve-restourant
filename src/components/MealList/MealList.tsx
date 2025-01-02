@@ -6,18 +6,25 @@ import { fetchMeals } from '../../services/api';
 import MealCard from '../MealCard/MealCard';
 import s from './MealList.module.css';
 
+interface Meal {
+  idMeal: string;
+  strMeal: string;
+  strMealThumb: string;
+  strInstructions: string;
+}
+
 interface MealListProps {
   limit: number;
 }
 
 const MealList: React.FC<MealListProps> = ({ limit }) => {
-  const [meals, setMeals] = useState<any[]>([]);
-  const [filteredMeals, setFilteredMeals] = useState<any[]>([]);
+  const [meals, setMeals] = useState<Meal[]>([]);
+  const [filteredMeals, setFilteredMeals] = useState<Meal[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const pathname = usePathname();
-  const router = useRouter(); // Using the router for navigation
+  const router = useRouter();
 
   useEffect(() => {
     const loadMeals = async () => {
@@ -27,6 +34,7 @@ const MealList: React.FC<MealListProps> = ({ limit }) => {
         setMeals(mealsData);
         setFilteredMeals(mealsData);
       } catch (err) {
+        console.error(err);
         setError('Failed to load meals');
       } finally {
         setLoading(false);
@@ -73,7 +81,7 @@ const MealList: React.FC<MealListProps> = ({ limit }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className={s.searchInput}
             />
-            <button className={s.searchButton} onClick={() => handleSearch()}>
+            <button className={s.searchButton} onClick={handleSearch}>
               Search
             </button>
           </div>
