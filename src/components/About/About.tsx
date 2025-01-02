@@ -25,7 +25,13 @@ const About = () => {
             This is a great space to write long text.
           </p>
         </div>
-        <Image src="/images/chef.jpg" alt="Chef" width={540} height={301} />
+        <Image
+          src="/images/chef.jpg"
+          alt="Chef"
+          width={540}
+          height={301}
+          className={s.imgChef}
+        />
       </div>
     </section>
   );

@@ -6,6 +6,10 @@
   gap: 20px;
 }
 
+.imgChef {
+  height: 301px;
+}
+
 .textWrapper {
   display: flex;
   flex-direction: column;
