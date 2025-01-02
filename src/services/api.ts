@@ -18,10 +18,8 @@ export const fetchMeals = async (count: number = 5): Promise<Meal[]> => {
     return responses.map((response) => response.data.meals[0]);
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      // Виводимо інформацію про помилку axios
       throw new Error(`Failed to fetch meals: ${error.message}`);
     } else {
-      // Обробка інших помилок
       throw new Error('Failed to fetch meals');
     }
   }

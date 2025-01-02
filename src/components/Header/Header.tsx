@@ -16,9 +16,10 @@ const Header = () => {
             </Link>
           </div>
           <div className={s.navCenter}>
-            <a href="/" className={s.logo}>
+            {/* Замінив <a> на <Link> для логотипу */}
+            <Link href="/" className={s.logo}>
               Selve Restaurant
-            </a>
+            </Link>
           </div>
           <div className={s.navRight}>
             <Link href="/contacts" className={s.navLink}>
