@@ -16,7 +16,6 @@ const Header = () => {
             </Link>
           </div>
           <div className={s.navCenter}>
-            {/* Замінив <a> на <Link> для логотипу */}
             <Link href="/" className={s.logo}>
               Selve Restaurant
             </Link>

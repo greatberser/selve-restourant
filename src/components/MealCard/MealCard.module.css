@@ -36,25 +36,25 @@
 
 @media (max-width: 768px) {
   .mealCard {
-    flex-direction: column; /* Перемикаємо порядок на стовпчик */
+    flex-direction: column;
     text-align: center;
   }
 
   .name {
-    order: 1; /* Назва перша */
+    order: 1;
     font-size: 1.25rem;
     margin-bottom: 10px;
   }
 
   .image {
-    order: 2; /* Зображення друге */
+    order: 2;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
   }
 
   .desc {
-    order: 3; /* Опис третій */
+    order: 3;
     font-size: 0.9rem;
     margin-top: 15px;
   }

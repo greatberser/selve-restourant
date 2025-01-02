@@ -6,7 +6,7 @@ interface MealCardProps {
   name: string;
   desc: string;
   reverse?: boolean;
-  showDivider?: boolean; // Новий проп для показу лінії
+  showDivider?: boolean;
 }
 
 const truncateText = (text: string, maxLength: number) => {
